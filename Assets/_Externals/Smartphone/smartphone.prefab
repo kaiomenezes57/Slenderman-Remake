@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4717887507390182}
   - component: {fileID: 33876693957189258}
   - component: {fileID: 23136804176431804}
+  - component: {fileID: 4688690509274360683}
   m_Layer: 0
   m_Name: smartphone
   m_TagString: Untagged
@@ -85,6 +86,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4688690509274360683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191933010613832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b75de02d00561284cbf5383b45604db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6122423921015361999
 GameObject:
   m_ObjectHideFlags: 0
