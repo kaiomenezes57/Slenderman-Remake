@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b24613c5-9c33-4feb-9102-73bff2c07588}">
+		<property name="assetPath">
+			<value>footseps (8).wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{aa37cf5c-427e-4c2e-b8d6-03a689272338}</destination>
+		</relationship>
+	</object>
+</objects>

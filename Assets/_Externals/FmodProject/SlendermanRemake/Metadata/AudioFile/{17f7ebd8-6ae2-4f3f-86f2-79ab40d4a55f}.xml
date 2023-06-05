@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{17f7ebd8-6ae2-4f3f-86f2-79ab40d4a55f}">
+		<property name="assetPath">
+			<value>453862__kyles__crickets-night-forest-with-2-sharp-close-cicadas-back-and-forth.flac</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>35.410375000000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{aa37cf5c-427e-4c2e-b8d6-03a689272338}</destination>
+		</relationship>
+	</object>
+</objects>
