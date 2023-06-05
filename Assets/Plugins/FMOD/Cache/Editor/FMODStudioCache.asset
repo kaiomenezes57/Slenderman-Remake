@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7243671242196731823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/AmbientMusic_Ambient_001
+  m_EditorClassIdentifier: 
+  Path: event:/Music/AmbientMusic_Ambient_001
+  Guid:
+    Data1: -1306310726
+    Data2: 1209330999
+    Data3: 372126617
+    Data4: 1358019666
+  Banks:
+  - {fileID: 4013921036418931069}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 129677
 --- !u!114 &-6821728042222677574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +42,10 @@ MonoBehaviour:
   Path: Assets/_Externals/FmodProject/SlendermanRemake/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638215088444029267
+  lastModified: 638215289940426869
   FileSizes:
   - Name: Desktop
-    Value: 1004
+    Value: 1228
   Exists: 1
 --- !u!114 &-6071345739089601259
 MonoBehaviour:
@@ -35,10 +62,10 @@ MonoBehaviour:
   Path: Assets/_Externals/FmodProject/SlendermanRemake/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638215088444009265
+  lastModified: 638215289940411860
   FileSizes:
   - Name: Desktop
-    Value: 1194
+    Value: 1340
   Exists: 1
 --- !u!114 &-5036423869206470956
 MonoBehaviour:
@@ -55,10 +82,10 @@ MonoBehaviour:
   Path: Assets/_Externals/FmodProject/SlendermanRemake/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 638215088444434348
+  lastModified: 638215289941006970
   FileSizes:
   - Name: Desktop
-    Value: 48864
+    Value: 53888
   Exists: 1
 --- !u!114 &-4821894851635456132
 MonoBehaviour:
@@ -75,7 +102,7 @@ MonoBehaviour:
   Path: Assets/_Externals/FmodProject/SlendermanRemake/Build/Desktop/Ambient.bank
   Name: Ambient
   StudioPath: bank:/Ambient
-  lastModified: 638215088444204305
+  lastModified: 638215289940381851
   FileSizes:
   - Name: Desktop
     Value: 476256
@@ -134,6 +161,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 33000
+--- !u!114 &-3189246931805579590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/PlayerSigh
+  m_EditorClassIdentifier: 
+  Path: event:/Player/PlayerSigh
+  Guid:
+    Data1: 498884686
+    Data2: 1181454994
+    Data3: -207092571
+    Data4: 1377943995
+  Banks:
+  - {fileID: -5036423869206470956}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 275
+--- !u!114 &-3177350190759059894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Jumpscare
+  m_EditorClassIdentifier: 
+  Path: event:/Jumpscare
+  Guid:
+    Data1: 689946659
+    Data2: 1315543367
+    Data3: -341064318
+    Data4: -342665331
+  Banks:
+  - {fileID: 8560339181900025178}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6086
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,15 +233,19 @@ MonoBehaviour:
   - {fileID: -6071345739089601259}
   - {fileID: 4013921036418931069}
   - {fileID: -5036423869206470956}
+  - {fileID: 8560339181900025178}
   EditorEvents:
   - {fileID: -3693685734870999169}
   - {fileID: -4173678719608235072}
+  - {fileID: -3177350190759059894}
+  - {fileID: -7243671242196731823}
+  - {fileID: -3189246931805579590}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6071345739089601259}
   StringsBanks:
   - {fileID: -6821728042222677574}
-  cacheTime: 638215088444434348
+  cacheTime: 638215289941191993
   cacheVersion: 131603
 --- !u!114 &4013921036418931069
 MonoBehaviour:
@@ -177,8 +262,28 @@ MonoBehaviour:
   Path: Assets/_Externals/FmodProject/SlendermanRemake/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638215088444229310
+  lastModified: 638215289940626905
   FileSizes:
   - Name: Desktop
-    Value: 494
+    Value: 1448384
+  Exists: 1
+--- !u!114 &8560339181900025178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/_Externals/FmodProject/SlendermanRemake/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638215289941191993
+  FileSizes:
+  - Name: Desktop
+    Value: 73664
   Exists: 1
