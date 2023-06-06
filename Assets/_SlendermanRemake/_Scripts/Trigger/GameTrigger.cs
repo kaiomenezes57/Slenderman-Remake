@@ -31,6 +31,16 @@ namespace SlendermanRemake.Trigger
             }
         }
 
+        private void OnTriggerExit(Collider other)
+        {
+            if (!other.CompareTag("Player")) { return; }
+            TriggerExit();
+        }
+
         protected abstract void TriggerAction();
+
+        protected virtual void TriggerExit()
+        {
+        }
     }
 }
