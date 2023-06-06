@@ -14,26 +14,22 @@ namespace SlendermanRemake
         private void OnEnable()
         {
             StartCoroutine(CheckRoutine(FindObjectOfType<ThirdPersonController>()));
-            Debug.Log("slender appeared!");
 
             IEnumerator CheckRoutine(ThirdPersonController player)
             {
                 while (true)
                 {
                     float distance = Vector3.Distance(transform.position, player.transform.position);
-                    transform.LookAt(player.transform);
 
                     if (distance < distanceToKill)
                     {
-                        Debug.Log("Player killed");
                         StopAllCoroutines();
                     }
 
                     if (distance > distanceToEscape)
                     {
-                        Debug.Log("Player escaped");
-                        OnPlayerEscaped?.Invoke();
                         StopAllCoroutines();
+                        OnPlayerEscaped?.Invoke();
                     }
 
                     yield return null;
