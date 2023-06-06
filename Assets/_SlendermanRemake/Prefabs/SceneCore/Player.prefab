@@ -332,10 +332,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8127360848171708318, guid: 42db2464346d91c47b812288879592f1,
         type: 3}
-      propertyPath: m_SpotAngle
-      value: 179
+      propertyPath: m_Range
+      value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8127360848171708318, guid: 42db2464346d91c47b812288879592f1,
+        type: 3}
+      propertyPath: m_SpotAngle
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 8127360848171708318, guid: 42db2464346d91c47b812288879592f1,
+        type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 566608127874112066, guid: 42db2464346d91c47b812288879592f1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
