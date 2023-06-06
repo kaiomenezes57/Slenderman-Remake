@@ -16,25 +16,21 @@ namespace StarterAssets
         [SerializeField] private float sprintSpeed = 4f;
         [Range(0.0f, 0.3f)] [SerializeField] private float rotationSmoothTime = 0.12f;
         [SerializeField] private float speedChangeRate = 10.0f;
+        [SerializeField] private LayerMask groundLayers;
 
         private readonly float gravity = 9.81f;
-
-        [SerializeField] private LayerMask groundLayers;
 
         private float _speed;
         private float _animationBlend;
         private float _targetRotation = 0.0f;
         private float _rotationVelocity;
         private float _verticalVelocity;
-
         private int _animIDSpeed;
-        private int _animIDMotionSpeed;
+        private bool _died;
 
         private Animator _animator;
         private CharacterController _controller;
         private StarterAssetsInputs _input;
-
-        private Vector3 verticalVelocity;
 
         private void Start()
         {
@@ -53,6 +49,7 @@ namespace StarterAssets
 
         private void MoveHandler()
         {
+            if (_died) { return; }
             float targetSpeed = _input.sprint ? sprintSpeed : moveSpeed;
             if (_input.move == Vector2.zero) targetSpeed = 0.0f;
 
@@ -96,6 +93,11 @@ namespace StarterAssets
             {
                 _verticalVelocity -= gravity * Time.deltaTime;
             }
+        }
+
+        public void Die()
+        {
+            _died = true;
         }
     }
 }
