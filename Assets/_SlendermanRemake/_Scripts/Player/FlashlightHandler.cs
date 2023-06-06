@@ -4,24 +4,43 @@ namespace SlendermanRemake
 {
     public class FlashlightHandler : MonoBehaviour
     {
-        private FlashlightIntensity initialIntensity = FlashlightIntensity.Weak;
+        public event System.Action<bool> OnIntensityChange;
+        private FlashlightIntensity _currentIntensity;
+        private bool _canUse = true;
 
         private void Start()
         {
-            SetLightIntensity(initialIntensity);
+            Battery battery = FindObjectOfType<Battery>();
+            SetLightIntensity(FlashlightIntensity.Medium);
+
+            battery.OnBatteryCharge += () => {
+                if (_currentIntensity == FlashlightIntensity.Off) 
+                {
+                    SetLightIntensity(FlashlightIntensity.Weak);
+                    _canUse = true;
+                }
+            };
+
+            battery.OnBatteryDown += () => {
+                SetLightIntensity(FlashlightIntensity.Off);
+                _canUse = false;
+            };
         }
 
         private void Update()
         {
-            if (!Input.GetKeyDown(KeyCode.F)) { return; }
-            initialIntensity = GetNextIntensity(initialIntensity);
-            SetLightIntensity(initialIntensity);
+            if (!Input.GetKeyDown(KeyCode.F) || !_canUse) { return; }
+            SetLightIntensity(GetNextIntensity(_currentIntensity));
         }
 
-        public void SetLightIntensity(FlashlightIntensity flashlightIntensity)
+        private void SetLightIntensity(FlashlightIntensity flashlightIntensity)
         {
             Light smartphoneLight = GetComponentInChildren<Light>();
             smartphoneLight.intensity = (int)flashlightIntensity;
+            _currentIntensity = flashlightIntensity;
+            
+            bool condition = _currentIntensity != FlashlightIntensity.Off;
+            OnIntensityChange?.Invoke(condition);
         }
 
         private FlashlightIntensity GetNextIntensity(FlashlightIntensity current)
@@ -39,6 +58,9 @@ namespace SlendermanRemake
 
                 case FlashlightIntensity.Hard:
                     return FlashlightIntensity.Off;
+            
+                default:
+                    break;
             }
 
             return FlashlightIntensity.Weak;
