@@ -24,6 +24,14 @@ namespace SlendermanRemake
             StartCoroutine(AppearRoutine());
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                PerformAppear();
+            }
+        }
+
         private void PerformAppear()
         {
             StopAllCoroutines();
@@ -82,7 +90,6 @@ namespace SlendermanRemake
             Vector3 playerPos = playerPosition.position;
             Vector3 spawnPos = playerPos + (playerPosition.right * UnityEngine.Random.Range(-randomRange, randomRange)) + (playerPosition.forward * forwardOffset);
            
-            Debug.Log($"you = {playerPosition} | slender = {spawnPos}");
             return spawnPos;
         }
     }
